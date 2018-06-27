@@ -1,0 +1,230 @@
+html {
+    background: #f5f7f8;
+    padding: 20px 0;
+    display: flex;
+}
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+.main-division{
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  font-family: 'Roboto';
+  display: grid;
+  
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 30px;
+
+  position: relative;
+  -webkit-animation-name: maindivision;
+  -webkit-animation-duration: 1s;
+  animation-name: maindivision;
+  animation-duration: 1s
+    
+}
+@-webkit-keyframes maindivision {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes maindivision { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+
+hr {
+    border: 1px solid lightgray;
+    width: 95%;
+    
+}
+
+@media only screen and (min-width: 500px) {
+    .main-division {
+      grid-template-columns: 1fr 1fr;
+    }  
+  }
+  
+  @media only screen and (min-width: 850px) {
+    .main-division {
+      grid-template-columns: 1fr 1fr 1fr ;
+    }
+  }
+
+img{
+    width: auto;
+    max-height: 50px;
+    min-height: 40px;
+    max-width: 140px;
+    padding-top: 5px;
+}
+
+.logo{
+    width: 100%;
+    height: 60px;
+    align-content: center;
+}
+
+.box{
+    margin-left: 30%;
+    margin-right: 30%;
+    max-width: 40%;
+    height: 60px;
+}
+#box1{ background: url("/assets/AAPL.png") no-repeat center ; background-size: contain; }
+#box2{ background: url("/assets/MSFT.png") no-repeat center ; background-size: contain; }
+#box3{ background: url("/assets/IBN.png") no-repeat center ;  background-size: contain; }
+#box4{ background: url("/assets/V.png") no-repeat center ;  background-size: contain; }
+#box5{ background: url("/assets/HDB.png") no-repeat center ;  background-size: contain; }
+#box6{ background: url("/assets/PYPL.png") no-repeat center ;  background-size: contain; }
+#box7{ background: url("/assets/TSLA.png") no-repeat center ; background-size: contain; }
+#box8{ background: url("/assets/FB.png") no-repeat center ; background-size: contain; }
+#box9{ background: url("/assets/AXP.png") no-repeat center ; background-size: contain; }
+#box10{ background: url("/assets/KO.png") no-repeat center ;  }
+#box11{ background: url("/assets/BABA.png") no-repeat center ;  background-size: contain; }
+#box12{ background: url("/assets/VOD.png") no-repeat center ; background-size: contain; }
+
+
+.name{
+    font-size: 18px;
+    max-height: 60px;
+    max-width: 100% ;
+    border-bottom: 2px solid lightgray;
+}
+
+p {
+    max-height: 100%;
+}
+
+.PST{
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    border-bottom: 2px solid lightgray;
+
+}
+
+.price{
+    width: 29%;
+    height: 100%;
+  float: left;
+  border-right: 2px solid lightgray;
+
+  
+}
+.size{
+    width: 29%;
+    height: 100%;
+    float: left;
+    border-right: 2px solid lightgray;
+
+}
+.tid{
+    width: 40%;
+    height: 100%;
+  float: left;
+}
+
+.card {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    text-align: center;
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
+    border-radius: 4px;
+  }
+  
+.card:hover {
+    top: -2px;
+    box-shadow: 5px 4px 5px rgba(0,0,0,0.2);
+  }
+
+.time{
+    max-width: 100%;
+    height: 50px;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 5px;
+
+}
+
+.sector{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+    height: 50px;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 5px;
+
+
+}  
+.industry{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+    height: 50px;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 5px;
+
+
+}  
+.ceo{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+    height: 50px;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 5px;
+
+
+}  
+.website{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+    height: 50px;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 5px;
+
+
+}  
+.description{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto;
+    max-width: 100%;
+}  
