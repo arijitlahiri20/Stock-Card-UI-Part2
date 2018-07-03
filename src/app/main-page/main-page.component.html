@@ -1,8 +1,11 @@
 <html>
   <div id="loader"></div>
-  <select name="" id="">
-    <option value="all">ALL</option>
-    <option value="AAPl">AAPL</option>
+  <span>
+<div id="menu" class="dropdown" style="display: none">
+  <p> Select Company From Below </p>
+  <select name="list" id="droplist" (change)="DisplayCard($event)" class="dp">
+    <option value="ALL">ALL</option>
+    <option value="AAPL">AAPL</option>
     <option value="MSFT">MSFT</option>
     <option value="IBN">IBN</option>
     <option value="V">V</option>
@@ -16,8 +19,10 @@
     <option value="VOD">VOD</option>
   </select>
   <br>
+</div>
+</span>
   <div id="main" class="main-division" style="display: none">
-    <div class="card">
+    <div id="AAPL" class="card">
         <div class="logo"><!--<img id="m1" src="" alt="LOGO">--><div id="box1" class="box"></div></div>
         <div class="name"><b><p id="n1"></p></b></div>
         
@@ -34,7 +39,7 @@
         <div class="website"> <p> <span>WEBSITE : <a id="website1"></a></span></p></div>
         <div class="description"><p id="des1"></p></div>
     </div>
-    <div class="card">
+    <div id="MSFT" class="card">
         <div class="logo"><!--<img id="m2" src="" alt="LOGO">--><div id="box2" class="box"></div></div>
         <div class="name"><b><p id="n2"></p></b></div>
         
@@ -51,7 +56,7 @@
         <div class="website"><p><span>WEBSITE : <a id="website2"></a></span></p></div>
         <div class="description"><p id="des2"></p></div>
     </div>
-    <div class="card">
+    <div id="IBN" class="card">
         <div id="m3" class="logo"><!--<img id="m3" src="" alt="LOGO">--><div id="box3" class="box"></div></div>
         <div class="name"><b><p id="n3"></p></b></div>
         
@@ -68,7 +73,7 @@
         <div class="website"><p><span>WEBSITE : <a id="website3"></a></span></p></div>
         <div class="description"><p id="des3"></p></div>
       </div>
-    <div class="card">
+    <div id="V" class="card">
         <div class="logo"><!--<img id="m4" src="" alt="LOGO">--><div id="box4" class="box"></div></div>
         <div class="name"><b><p id="n4"></p></b></div>
         
@@ -85,7 +90,7 @@
         <div class="website"><p><span>WEBSITE : <a id="website4"></a></span></p></div>
         <div class="description"><p id="des4"></p></div>
       </div>     
-    <div class="card">
+    <div id="HDB" class="card">
         <div class="logo"><!--<img id="m5" src="" alt="LOGO">--><div id="box5" class="box"></div></div>
         <div class="name"><b><p id="n5"></p></b></div>
         
@@ -102,7 +107,7 @@
         <div class="website"> <p> <span>WEBSITE : <a id="website5"></a></span></p></div>
         <div class="description"><p id="des5"></p></div>
       </div>
-      <div class="card">
+      <div id="PYPL" class="card">
           <div id="m6" class="logo"><!--<img id="m6" src="" alt="LOGO">--><div id="box6" class="box"></div></div>
           <div class="name"><b><p id="n6"></p></b></div>
           
@@ -119,7 +124,7 @@
           <div class="website"> <p> <span>WEBSITE : <a id="website6"></a></span></p></div>
           <div class="description"><p id="des6"></p></div>
       </div>
-      <div class="card">
+      <div id="TSLA" class="card">
           <div class="logo"><!--<img id="m7" src="" alt="LOGO">--><div id="box7" class="box"></div></div>
           <div class="name"><b><p id="n7"></p></b></div>
           
@@ -136,7 +141,7 @@
           <div class="website"> <p> <span>WEBSITE : <a id="website7"></a></span></p></div>
           <div class="description"><p id="des7"></p></div>
       </div>
-      <div class="card">
+      <div id="FB" class="card">
           <div class="logo"><!--<img id="m8" src="" alt="LOGO">--><div id="box8" class="box"></div></div>
           <div class="name"><b><p id="n8"></p></b></div>
           
@@ -153,7 +158,7 @@
           <div class="website"> <p> <span>WEBSITE : <a id="website8"></a></span></p></div>
           <div class="description"><p id="des8"></p></div>
       </div>
-        <div class="card">
+        <div id="AXP" class="card">
             <div class="logo"><!--<img id="m9" src="" alt="LOGO">--><div id="box9" class="box"></div></div>
         <div class="name"><b><p id="n9"></p></b></div>
         
@@ -170,7 +175,7 @@
         <div class="website"> <p> <span>WEBSITE : <a id="website9"></a></span></p></div>
         <div class="description"><p id="des9"></p></div>
         </div>
-        <div class="card">
+        <div id="KO" class="card">
             <div id="m10" class="logo"><!--<img id="m10" src="" alt="LOGO">--><div id="box10" class="box"></div></div>
         <div class="name"><b><p id="n10"></p></b></div>
         
@@ -187,7 +192,7 @@
         <div class="website"> <p> <span>WEBSITE : <a id="website10"></a></span></p></div>
         <div class="description"><p id="des10"></p></div>
         </div>
-        <div class="card">
+        <div id="BABA" class="card">
             <div id=m11 class="logo"><!--<img id="m11" src="" alt="LOGO">--><div id="box11" class="box"></div></div>
         <div class="name"><b><p id="n11"></p></b></div>
         
@@ -204,7 +209,7 @@
         <div class="website"> <p> <span>WEBSITE : <a id="website11"></a></span></p></div>
         <div class="description"><p id="des11"></p></div>
         </div>     
-        <div class="card">
+        <div id="VOD" class="card">
             <div class="logo"><!--<img id="m12" src="" alt="LOGO">--><div id="box12" class="box"></div></div>
         <div class="name"><b><p id="n12"></p></b></div>
         

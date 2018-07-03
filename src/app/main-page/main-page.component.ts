@@ -41,6 +41,7 @@ export class MainPageComponent implements OnInit {
         this.getData(); 
         (document.getElementById("main") as HTMLDivElement).style.display = "none";
       (document.getElementById("loader") as HTMLDivElement).style.display = "block";
+      (document.getElementById("menu") as HTMLDivElement).style.display = "none";
         setTimeout(this.updateData, 3000);
     }, 120000);
   }
@@ -48,6 +49,7 @@ export class MainPageComponent implements OnInit {
   updateData(){
     (document.getElementById("main") as HTMLDivElement).style.display = "grid";
       (document.getElementById("loader") as HTMLDivElement).style.display = "none";
+      (document.getElementById("menu") as HTMLDivElement).style.display = "flex";
   }
 
   getData(){
@@ -150,4 +152,31 @@ export class MainPageComponent implements OnInit {
     });
     return this.http.get(apiurl, options).toPromise().then((res) => { /*console.log(res);*/ callback(res.json()); });
   }
+
+
+  DisplayCard(event: any){
+    var company: string = event.target.value;
+
+    if( company == "ALL"){
+      for(let i=0;i<12;i++){
+          (document.getElementById(sym[i]) as HTMLDivElement).style.display = "flex";
+      }
+      return ;
+    }
+    console.log(company);
+    for(let i=0;i<12;i++){
+        if(sym[i]==company){
+          console.log(sym[i] + company);
+          (document.getElementById(sym[i]) as HTMLDivElement).style.display = "flex";
+
+          continue;
+        }
+        else{
+          (document.getElementById(sym[i]) as HTMLDivElement).style.display = "none";
+        }
+          
+    }
+
+  }
+  
 }
